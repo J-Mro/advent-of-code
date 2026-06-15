@@ -32,8 +32,8 @@ func parseInstruction(direction string) int {
 
 func turnDial(dialPosition, instruction int) int {
 	sum := dialPosition + instruction
-	return (sum % 100)
 
+	return ((sum % 100) + 100) % 100
 }
 
 func main() {
